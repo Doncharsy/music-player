@@ -1,0 +1,181 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+
+img{
+ width: 60px;
+ cursor: pointer;
+ border-radius: 5px;
+ transition: all .7s ease;
+}
+
+.cover-art:hover{
+ border-radius: 8rem;
+}
+
+body{
+ font-family: "Lato", sans-serif;
+ display: flex;
+ min-height: 100vh;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ overflow-x: hidden;
+ background: linear-gradient(to right, #ebcff0, #ffdbdb );
+ transition: all 1s;
+}
+
+
+.container{
+ display: grid;
+ gap: 10px;
+ grid-template-columns: repeat(8, 60px);
+ grid-template-rows: repeat(6, 1fr);
+}
+.pic1{
+ grid-column: 2/3;
+}
+.pic2{
+ grid-column: 3/4;
+}
+.pic3{
+ grid-column: 6/7;
+}
+
+.pic5{
+ grid-column: 1/2;
+}
+
+.pic21{
+ grid-column: 2/3;
+}
+
+.pic27{
+ grid-column: 3/4;
+}
+
+.pic31{
+ grid-column: 4/5;
+}
+
+.music-player{
+ margin: 2.3rem 0;
+}
+
+.album-cover-container, .music-player{
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ text-align: center;
+}
+
+audio{
+ display: none;
+}
+.show{
+ display: block;
+}
+
+
+
+.song-title{
+ margin: .8rem 0;
+}
+
+.album-img{
+ width: 150px;
+ border-radius: 50%;
+ margin-inline: auto;
+ transition: all .8s ease;
+ animation: spin 3s linear infinite forwards;
+}
+.album-cover-container{
+ position: relative;
+}
+
+
+
+@keyframes spin{
+ 0%{transform: rotate(0deg);}
+ 100% {transform: rotate(360deg);}
+}
+
+
+
+.cover-page{
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 99;
+ height: 100vh;
+ width: 100%;
+ background: #FFE6E6;
+ overflow: hidden;
+ transition: all .4s ease-in;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ font-size: 4rem;
+ text-align: center;
+ color: #333;
+ margin: 0 auto;
+}
+
+.quotes{
+ font-size: 1rem;
+ display: block;
+ margin: 0 auto;
+ height: 2rem;
+ width: 80%;
+ opacity: 0;
+ line-height: 1.4;
+ transition: opacity .8s ease-in-out;
+}
+
+.btn{
+ margin-top: 1.3rem;
+ padding: 1rem 2.5rem;
+ cursor: pointer;
+ border-radius: .8rem;
+ font-size: 1.3rem;
+ border: none;
+ outline: none;
+ transition: all .5s ease;
+ background-color: #AD88C6;
+}
+
+.btn:hover{
+ background-color: #9BB0C1;
+}
+
+.move-up{
+ animation: move-up 1.5s .7s ease-in forwards;
+}
+
+@keyframes move-up{
+ 100%{
+  top: -150%;
+  z-index: 0;
+ }
+}
+
+@media screen and (max-width:600px){
+ img{
+  width: 35px;
+ }
+ .container{
+  grid-template-columns: repeat(8, 40px);
+  gap: 3px;
+ }
+}
+@media screen and (max-width:370px){
+ img{
+  width: 30px;
+ }
+ .container{
+  grid-template-columns: repeat(8, 30px);
+  gap: 2px;
+ }
+}
